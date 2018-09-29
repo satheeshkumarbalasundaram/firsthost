@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body{
+
+}
+
+.fcardrow {
+  padding: 5px;
+ 
+  margin-top: 50px;
+}
+.fcards {
+  background-color: white;
+  height: 380px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1px;
+  border-radius: 10px;
+   margin-top:10px;
+}
+.fcards .frow1 {
+  height: 80px;
+  padding: 10px;
+  margin: 1px;
+}
+.fcards .frow1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fcards .frow2 {
+  height: 80px;
+  padding: 10px;
+  margin: 1px;
+}
+.fcards .frow3 {
+  height: 150px;
+  padding: 10px;
+  margin: 1px;
+}
+.fcards .frow4 {
+  height: 60px;
+  margin: 1px;
+}
+.fcards .frow4 P {
+  display: none;
+}
+.fcards:hover {
+
+   
+	 box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.2), 4px 10px 24px 4px rgba(0, 0, 0, 0.19);
+	<--  background-color: #f5f5f5;-->
+	  <--box-shadow: 0px 4px 8px 0px orange, 0px 6px 20px 0px violet;-->
+}
+.fcards:hover .frow4 p {
+  display: block;
+}
+.fcards1 {
+  background-color: white;
+  height: 380px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1px;
+   margin-top:10px;
+}
+.fcards1 .frow1 {
+  height: 80px;
+  padding: 10px;
+  background-color: yellowgreen;
+  margin: 1px;
+}
+.fcards1 .frow1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fcards1 .frow2 {
+  height: 80px;
+  padding: 10px;
+  background-color: blueviolet;
+  margin: 1px;
+}
+.fcards1 .frow3 {
+  height: 150px;
+  padding: 10px;
+  background-color: dodgerblue;
+  margin: 1px;
+}
+.fcards1 .frow4 {
+  height: 60px;
+  background-color: orange;
+  margin: 1px;
+}
+.fcards1 .frow4 P {
+  display: none;
+}
+.fcards1:hover {
+  background-color: lightgray;
+}
+.fcards1:hover .frow1 {
+  background-color: lightgray;
+}
+.fcards1:hover .frow2 {
+  background-color: lightgray;
+}
+.fcards1:hover .frow3 {
+  background-color: lightgray;
+}
+.fcards1:hover .frow4 {
+  background-color: lightgray;
+}
+.fcards1:hover .frow4 p {
+  display: block;
+}
+.sticky{
+top:0px;
+position:sticky;
+z-index:1;
+
+}
+.navtop{
+background-color:gray;
+height:30px;
+
+}
+
+.navtop a{
+color:white;
+margin:5px;
+}
+
+.scrolled{
+
+background-color:blue;
+}
+
+</style>
+
+<script>
+
+$(window).scroll(function(){
+	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+});
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 800) {
+	    $(".sticky").css("background" , "#ff6300"  );
+		$("nav ul li a").css("color","white"    );
+	  }
+
+	  else{
+		  $(".sticky").css("background" , "#f5f5f5"); 
+$("nav ul li a").css("color","gray"    );		  
+	  }
+  })
+});
+
+
+
+</script>
+</head>
+
+<body>
+
+<div class="navtop">
+<a>Contact centre on cloud</a>
+
+</div>
+  <!-- Static navbar -->
+      <nav class="navbar navbar-default sticky">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="./">Default <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+<div class="container-fluid" style="background-color:white;padding-top:50px;">
+<h1 style="text-align:center;"  >
+Flexi-cards
+
+</h1>
+
+
+
+    <div class="row fcardrow">
+        <div class=" col-md-3">
+            <div class="fcards">
+                <div class="row frow1">
+                    <img class="fimage" src="./img1.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3">
+            <div class="fcards">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img2.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3">
+            <div class="fcards">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img3.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3 ">
+            <div class="fcards">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img4.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row fcardrow">
+        <div class=" col-md-3">
+            <div class="fcards1">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img1.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3">
+            <div class="fcards1">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img2.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3">
+            <div class="fcards1">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img3.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-md-3 ">
+            <div class="fcards1">
+                <div class="row frow1">
+                    <img class="fimage" src="./images/img4.png" style="" />
+
+                </div>
+                <div class="row frow2">
+                    <h4>Incident Management</h4>
+                </div>
+                <div class="row frow3">
+                    <p>It starts with easy end‑user access to omni‑channel support that flows to the IT service desk for incident capture and prioritization based on predetermined service level targets.</p>
+
+                </div>
+                <div class="row frow4">
+
+                    <p><a class="btn btn-default" href="#" role="button"> &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<footer style="background-color:gray; height:1000px;" >
+
+
+
+</footer>
+</body>
+</html>
